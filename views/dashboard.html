@@ -1,0 +1,6 @@
+<h2>Top heroes</h2>
+<div class="dashboardgrid">
+    <div ng-repeat="data in heroesdata">
+        <a ui-sref="mainpage.herodetail({userid: {{data.id}}, username: {{'data.first_name'}}+' '+{{'data.last_name'}}, parent: 'd'})">{{data.first_name+" "+data.last_name}}</a><br>
+    </div>
+</div>

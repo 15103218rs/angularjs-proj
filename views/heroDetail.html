@@ -1,0 +1,29 @@
+<h2>{{name+" details!"}}</h2>
+<h2>Id:{{"  "+id}}</h2>
+<div class="form-div">
+
+    <form name="editform" class="form-css" ng-submit="submitdetails(editform.$valid)" novalidate>
+        <label>
+            <p>Name:</p>
+            <input type="text" ng-model="name" name="uname" required>
+        </label>
+        <div class="error" ng-show="(editform.$submitted || editform.uname.$touched) && editform.uname.$invalid">*Tell your name</div>
+        <br>
+        <label>
+            <p>Job:</p>
+            <select name="job" ng-model="userjob" required>
+                <option value="" selected>--Select your option--</option>
+                <option value="backend">Backend developer</option>
+                <option value="frontend">Frontend developer</option>
+                <option value="hr">HR manager</option>
+                <option value="android">Andorid developer</option>
+            </select>
+        </label>
+        <div class="error" ng-show="(editform.$submitted || editform.job.$touched) && editform.job.$error.required">*Choose your job</div>
+        <br><br>
+        <div class="form-btns">
+            <button id="b1" type="button" ng-click="goback()">Back</button>
+            <button id="b2" type="submit">Submit</button>
+        </div>
+    </form>
+</div>

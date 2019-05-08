@@ -1,0 +1,11 @@
+<h2>My heroes</h2>
+<div class="herolistdisplay">
+    <div ng-repeat="data in heroesdata" ng-click="getdetails(data)" ng-mouseenter="changeColorMenu('true')" ng-mouseleave="changeColorMenu('false')">
+        <p><span class="index">{{data.id}}</span><span ng-style="customStyle.style">{{"  "+data.first_name+" "+data.last_name}}</span></p><br>
+    </div>
+    
+</div>
+<div class="info">
+    <p class="viewdetailsTxt" ng-show="showoptions()">{{fullname+" is my hero!!"}}</p>
+    <button class="viewdetailsBtn" type="button" ng-show="showoptions()" ng-click="showdetails()">View details</button>
+</div>

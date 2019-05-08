@@ -1,0 +1,6 @@
+<div class="navbar">
+    <a ng-class="dashboardActive" ng-show="showdashboard()" ui-sref="mainpage.dashboard">Dashboard</a>
+    <a ng-class="heroesActive" ui-sref="mainpage.heroeslist">Heroes</a>
+    <a class="logoutBtn" ng-click="logout()" ui-sref="#">Log out</a>
+</div>
+<ui-view></ui-view>

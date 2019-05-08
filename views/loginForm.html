@@ -1,0 +1,23 @@
+
+<main>
+    <div class="loginform-div">
+        <h2>Please login</h2>
+        <form name="loginform" class="form-css" ng-submit="login(loginform.$valid)" novalidate>
+            <label>
+                <p>Email:</p>
+                <input type="email" ng-model="loginemail" ng-focus="removemessage()" name="email" required>
+            </label>
+            <div class="error" ng-show="(loginform.$submitted || loginform.email.$touched) && loginform.email.$invalid && !loginform.email.$error.required">*Email is invalid</div>
+            <div class="error" ng-show="(loginform.$submitted || loginform.email.$touched) && loginform.email.$error.required">*Tell your email</div>
+            <br>
+            <label>
+                <p>Password:</p>
+                <input type="password" ng-model="loginpassword" ng-focus="removemessage()" name="password" required>
+            </label>
+            <div class="error" ng-show="(loginform.$submitted || loginform.password.$touched) && loginform.password.$invalid">*Tell your password</div>
+            <br><br>
+            <button type="submit">Log In</button>
+        </form>
+        <p ng-show="message" class="error">Invalid credentials</p>
+    </div>
+</main>
